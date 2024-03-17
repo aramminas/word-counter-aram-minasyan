@@ -1,0 +1,55 @@
+html,
+body{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex: 0 1 0;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    background-image: url("https://source.unsplash.com/random/1200x800?sig=1");
+    background-size: 100%;
+}
+
+header {
+    height: 80px;
+    background-color: #232222;
+}
+
+header img {
+    width: 200px;
+}
+
+footer {
+    flex-shrink: 0;
+    color: gray;
+    background-color: #333232;
+}
+
+#text-counter {
+    max-height: 370px;
+}
+
+.card-container {
+    max-width: 18rem;
+}
+
+.text-error {
+    display: none;
+}
+
+.show-error {
+    display: block;
+}
+
+.text-container {
+    padding: 4px 6px 8px;
+    background-color: #ffffff60;
+    border-radius: 8px;
+}
