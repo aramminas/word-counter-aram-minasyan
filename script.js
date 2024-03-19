@@ -2,8 +2,13 @@ const calculateBtn = document.querySelector('.calculate-btn');
 calculateBtn.addEventListener("click", calculateBtnClick);
 
 function calculateBtnClick() {
-    const text = document.querySelector('#text-counter')?.value?.trim();
+    const text = document.querySelector('#text-counter')
+    ?.value
+    // romoving all symbols from text
+    ?.replace(/[`0-9|~@#$%^&*()_|+\-=;'",<>\{\}\[\]\\\/]/gi, '')
+    ?.trim();
 
+console.log({text});
     if (!text) {
         showError();
         return;
@@ -25,7 +30,7 @@ function showError() {
 
 function getTextInfo(text) {
     // symbols for separating sentences are '.' , '?', '!'
-    const sentenceRegExp = new RegExp('[.|?|!]\\s+');
+    const sentenceRegExp = new RegExp('[.|?|!|:]\\s+');
     const sentences = text.split(sentenceRegExp);
     const { words, letters } = getWordsQuantities(sentences);
 
