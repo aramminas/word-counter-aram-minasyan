@@ -14,7 +14,7 @@ body {
 main {
     flex: 1;
     background-image: url("https://source.unsplash.com/random/1200x800?sig=1");
-    background-size: 100%;
+    background-size: cover;
 }
 
 header {
@@ -34,10 +34,6 @@ footer {
 
 #text-counter {
     max-height: 370px;
-}
-
-.card-container {
-    max-width: 18rem;
 }
 
 .text-error {
